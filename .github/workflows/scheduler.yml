@@ -22,7 +22,7 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Run Python script
-        run: python mommyNewsletter.py
+        run: python taylorLoveLetter.py
         env:
           EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
           API_KEY: ${{ secrets.API_KEY }}
