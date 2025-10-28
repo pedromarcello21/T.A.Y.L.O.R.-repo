@@ -3,7 +3,7 @@ name: T.A.Y.L.O.R. execution
 on:
   workflow_dispatch: #allows for manual run
   schedule:
-    - cron: '0 22 * * *'
+    - cron: '0 22 * * 3'
 
 jobs:
   run-python-script:

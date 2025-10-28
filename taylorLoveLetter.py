@@ -14,11 +14,14 @@ load_dotenv()  # this reads the .env file
 
 openai.api_key = os.getenv('API_KEY')
 
-prompt = "Create a message for Taylor.  She's my beautiful girlfriend and express how much I love her.  Include emojis."
+prompts = [
+    "Write a poem that's not a haiku for my beautiful girlfriend Taylor using a specific theme of love.",
+    "Write a Haiku for my beautiful girlfriend Taylor that likens her beauty to something specific "
+          ]
 
 completion = openai.chat.completions.create(
     model="gpt-3.5-turbo",
-    messages=[{"role": "user", "content": prompt}],
+    messages=[{"role": "user", "content": random.choice(prompts)}],
 )
 
 body = completion.choices[0].message
